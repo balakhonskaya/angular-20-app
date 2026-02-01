@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../model/course';
 import { JsonPipe } from '@angular/common';
 
@@ -10,7 +10,10 @@ import { JsonPipe } from '@angular/common';
 })
 export class CourseCardComponent {
 
-  @Input() course: Course;
+  @Input({ required: true}) course: Course;
+
+  @Output('courseSelected')
+  courseEmmiter = new EventEmitter<Course>();
 
   constructor() {
 
@@ -18,6 +21,11 @@ export class CourseCardComponent {
 
   ngOnInit() {
 
+  }
+
+  onCourseViewed() {
+    console.log('Course clicked')
+    this.courseEmmiter.emit(this.course);
   }
 
 }

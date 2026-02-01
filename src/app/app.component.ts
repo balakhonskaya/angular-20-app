@@ -12,4 +12,8 @@ export class AppComponent {
 
     courses: Course[] = COURSES;
 
+    onCourseSelected(course: Course) {
+        console.log('App component - card triggert', course);
+    }
+
 }
