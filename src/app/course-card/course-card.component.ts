@@ -10,7 +10,9 @@ import { JsonPipe } from '@angular/common';
 })
 export class CourseCardComponent {
 
-  @Input({ required: true}) course: Course;
+  @Input() course: Course;
+
+  @Input({ required: true}) index: number;
 
   @Output('courseSelected')
   courseEmmiter = new EventEmitter<Course>();
