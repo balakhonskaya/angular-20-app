@@ -12,7 +12,12 @@
             (courseSelected)="onCourseSelected($event)" 
             [course]="course" 
             [index]="index"
-        ></course-card>
+        >
+        <div class="course-description">
+            {{ course.longDescription }}
+        </div>
+    
+    </course-card>
     }  
 
     @empty {
