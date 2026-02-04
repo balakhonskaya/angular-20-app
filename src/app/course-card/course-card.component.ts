@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../model/course';
-import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'course-card',
