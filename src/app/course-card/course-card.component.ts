@@ -4,7 +4,7 @@ import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'course-card',
-  imports: [JsonPipe],
+  imports: [],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
