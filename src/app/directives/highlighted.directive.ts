@@ -2,6 +2,7 @@ import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[highlighted]',
+  standalone: true
 })
 export class HighlightedDirective {
 
@@ -9,9 +10,9 @@ export class HighlightedDirective {
     console.log("Directive created"); 
   }
 
-  @HostBinding('className') 
+  @HostBinding('class.highlighted') 
     get cssClasses() {
-      return "highlighted"
+      return true
   }
 
 }
