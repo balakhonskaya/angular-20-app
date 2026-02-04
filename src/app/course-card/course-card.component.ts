@@ -1,10 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Course } from '../model/course';
-import { JsonPipe } from '@angular/common';
+import { HighlightedDirective } from '../directives/highlighted.directive';
 
 @Component({
   selector: 'course-card',
-  imports: [JsonPipe],
+  imports: [HighlightedDirective],
   templateUrl: './course-card.component.html',
   styleUrl: './course-card.component.css'
 })
